@@ -32,13 +32,16 @@ public class LearnLoopingStatements {
 			
 			if(i == 3) {
 				System.out.println("Three");
-				break;
-				//continue;
+				//break;
+				continue;
 			}
 			
 			System.out.println(i);
 			
 		}
+		
+		
+		System.out.println("Out of for loop");
 		
 		
 		

@@ -3,18 +3,18 @@ package week1.day1;
 //accessSpecifier class ClassName{}
 public class Car {
 	
-	 String brandName = "Hyundai";
-	 int numWheels = 4;
-	 boolean isPuncture = false;
-	 char fuelType = 'P';
-	 double carPrice = 800000.324324;
+	 public String brandName = "Hyundai";
+	 public int numWheels = 4;
+	 public boolean isPuncture = false;
+	public char fuelType = 'P';
+	public double carPrice = 800000.324324;
 	
 
 	// accessSpecifier returnType methodName(){}
 	public void driveCar() {
-		String driverName = "Hari";
+		//String driverName = "Hari";
 		System.out.println("Driving car");
-		System.out.println(driverName);
+		//System.out.println(driverName);
 		
 	}
 
@@ -22,9 +22,12 @@ public class Car {
 		System.out.println("Applied brake");
 		//System.out.println(carPrice);
 		
-		int numOfWheels = numWheels;
+		//int numOfWheels = numWheels;
 
 	}
+	
+	
+	
 
 	public static void main(String[] args) {
 
