@@ -1,4 +1,4 @@
-package testcase;
+package testng.day2;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -15,9 +15,7 @@ public class BaseClass {
 	//set driver as global variable
 	public ChromeDriver driver;
 	
-	public String excelFileName;
-	
-	@Parameters({"username","password"})
+		
 	@BeforeMethod
 	public void login(String username,String password) {
 		WebDriverManager.chromedriver().setup();
@@ -25,8 +23,8 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		driver.get("http://leaftaps.com/opentaps/");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.findElementById("username").sendKeys(username);
-		driver.findElementById("password").sendKeys(password);
+		driver.findElementById("username").sendKeys("demosalesmanager");
+		driver.findElementById("password").sendKeys("crmsfa");
 		driver.findElementByClassName("decorativeSubmit").click();
 		driver.findElementByLinkText("CRM/SFA").click();
 		driver.findElementByLinkText("Leads").click();
@@ -39,12 +37,7 @@ public class BaseClass {
 
 	}
 	
-	@DataProvider(name="fetchData")
-	public String[][] sendData() throws IOException {
-		
-		return ReadExcel.readData(excelFileName);
-
-	}
+	
 	
 
 }
