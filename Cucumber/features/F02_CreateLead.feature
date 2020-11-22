@@ -1,5 +1,6 @@
 Feature: Leaftaps Create Lead functionality
 
+@functional @regression
 Scenario: Test the create lead with mandatory fields
 Given Enter the username as demosalesmanager
 And Enter the password as crmsfa

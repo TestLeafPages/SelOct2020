@@ -4,6 +4,7 @@ Feature: Leaftaps login functionality
 #Given launch the Chrome Browser
 #And load the application url
 
+@regression
 Scenario Outline: Test the login with positve credential
 Given Enter the username as <username>
 And Enter the password as <password>
@@ -15,6 +16,7 @@ Examples:
 |demosalesmanager|crmsfa|
 |democsr|crmsfa|
 
+@smoke @functional
 Scenario: Test the login with negative credential
 Given Enter the username as demosalesmanager
 And Enter the password as crmsfa123
